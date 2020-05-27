@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+table, th, td {
+  border: #000000 1px solid;
+}
+
+table {
+  width: 40%;
+}
+
+th {
+  background-color: yellow;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+.data {
+  text-align: right;
+}
