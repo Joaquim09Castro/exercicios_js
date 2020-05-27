@@ -1,25 +1,28 @@
+/* Obrigado Jarom */
 
-var numero = (8);
-var nome = ("Fulâno");
+function saudacao(nome) {
 
-function dobro() {
-
-  document.write( numero * 2 + "<br>");
-
-}
-
-function metade() {
-
-  document.write( numero / 2 + "<br>");
+  var nome = document.getElementById("nome").value;
+  var ola;
+  ola = alert("Olá " + nome);
+  document.getElementById("nome").value = ola;
 
 }
 
-function saudacao() {
+function dobro(num) {
 
-  document.write( "olá " + nome + "<br>");
+  var num = document.getElementById("numero").value;
+  var result;
+  result = num * 2;
+  document.getElementById("numero").value = result;
 
 }
 
-dobro();
-metade();
-saudacao();
+function metade(num) {
+
+  var num = document.getElementById("numero").value;
+  var result;
+  result = num / 2;
+  document.getElementById("numero").value = result;
+
+}
