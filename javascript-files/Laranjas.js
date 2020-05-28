@@ -35,7 +35,7 @@ if (laranjasRepartidas > 1) {
   mostra("Cada vizinho recebeu " + laranjasRepartidas + " laranjas de Joselito.");
 }else {
   mostra("Cada vizinho recebeu uma laranja de Joselito.");
-}
+};
 
 mostra("Joselito manteve " + laranjasExcesso + " laranjas.");
 
