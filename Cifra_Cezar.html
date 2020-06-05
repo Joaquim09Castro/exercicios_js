@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+
+<!--Utilize o campo de script abaixo para resolver os problemas propostos!-->
+<script>
+
+  function esconde(frase, salto) {
+
+    /*
+    1. Separar a frase em letras
+    2. Pegar o cdg das letras
+    3. add salto ao cdg das letras (a + 2 = c)
+    4. juntar as letras guardando num pote
+    5. retornar
+    */
+    var caracteres = frase.split("");
+    var codigoCaracteres = [];
+    var letrasCodificadas = [];
+    var i;
+
+    // Mudando o valor dos charcodes
+    for ( i = 0; i < caracteres.length; i++) {
+  
+      var codigoLetra = caracteres[i].charCodeAt(0);
+
+      codigoCaracteres.push(codigoLetra + salto);
+  
+    }
+
+    // Colocar letras dentro de letrasCodificadas a partir do código das letras
+    for ( i = 0; i < codigoCaracteres.length; i++) {
+    
+      letrasCodificadas.push(String.fromCharCode(codigoCaracteres[i]));
+    
+    }
+
+    return letrasCodificadas.join("");
+
+  }
+
+  document.write(esconde("Olá mundo", 3));
+
+  function revela(fraseCod, salto) {
+
+    /*
+    1. Separar a frase em letras
+    2. Pegar o cdg das letras
+    3. add salto reverso ao cdg das letras
+    4. juntar as letras guardando num pote
+    5. retornar
+    */
+    var codigo = fraseCod.split("");
+    var fraseCodificado = [];
+    var letrasDecod = [];
+    var i;
+
+    for ( i = 0; i < codigo.length; i++) {
+    
+      var codificadoLetras = codigo[i].charCodeAt(0);
+
+      fraseCodificado.push(codificadoLetras + salto);
+
+    }
+
+    for ( i = 0; i < fraseCodificado.length; i++) {
+
+      letrasDecod.push(String.fromCharCode(fraseCodificado[i]));
+
+    }
+
+    return letrasDecod.join("");
+
+  }
+
+  document.write( "<br>" + revela("Roä#pxqgr", -3));
+
+</script>
